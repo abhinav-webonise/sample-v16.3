@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FirstComponent from './firstComponent.js';
+import ErrorComponent from './ErrorComponent';
+import MyComponent from './MyComponent';
 
 class App extends Component {
   constructor(props) {
@@ -11,11 +13,11 @@ class App extends Component {
       smart: true
     }
   }
-  
+
   // componentWillMount() {
   //   // Deprecated
 
-  //   /* 
+  //   /*
   //     If you were following the practice to assign props to state here, then start doing it in the constructor.
   //     or If you are following practice to write API calls or to fetch external data in componentWillMount,
   //     change it to componentDidMount lifecycle method.
@@ -46,7 +48,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    
+
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
@@ -73,6 +75,12 @@ class App extends Component {
             myName = {this.state.myName}
             changeSmartness = {this.changeSmartness.bind(this)}
           />
+        </div>
+
+        <div>
+          <ErrorComponent>
+            <MyComponent/>
+          </ErrorComponent>
         </div>
       </div>
     );

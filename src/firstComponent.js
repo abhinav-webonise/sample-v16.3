@@ -10,7 +10,7 @@ class FirstComponent extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   static getDerivedStateFromProps(newProps, prevState) {
@@ -28,7 +28,7 @@ class FirstComponent extends Component {
        Hi! Look at {this.state.myName}. He is very {this.state.smart ? 'smart': 'cool'}.
         <div>
           <input type = "button" value = "Change" onClick = {this.props.changeSmartness}/>
-        </div>  
+        </div>
       </div>
     );
   }
